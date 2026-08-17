@@ -1,0 +1,231 @@
+:root {
+  --bg-color: #fdfbf7; /* Cream white */
+  --bg-secondary: #f4eee0; /* Slightly darker cream */
+  --bg-hero: #fdfbf7;
+  --text-primary: #2d3748;
+  --text-dark: #1a202c;
+  --text-secondary: #4a5568;
+  --accent-color: #8b5a2b; /* Coffee accent */
+  --accent-light: #f5e6d3;
+  --accent-hover: #6f431c;
+  --border-color: #e2e8f0;
+
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+/* Theme Classes */
+.theme-coffee {
+  background-color: #3b2f2f !important; /* Coffee brown */
+  color: #fdfbf7 !important;
+  --text-primary: #fdfbf7;
+  --text-dark: #ffffff;
+  --text-secondary: #d7ccc8;
+  --bg-secondary: rgba(253, 251, 247, 0.05);
+  --border-color: rgba(253, 251, 247, 0.1);
+  --accent-color: #e6b981; /* Lighter accent for dark theme */
+}
+.theme-coffee h1, 
+.theme-coffee h2, 
+.theme-coffee h3, 
+.theme-coffee .text-dark,
+.theme-coffee .section-title {
+  color: var(--text-dark) !important;
+}
+.theme-coffee p,
+.theme-coffee .text-secondary {
+  color: var(--text-secondary) !important;
+}
+.theme-coffee .glass-card,
+.theme-coffee .card {
+  background-color: var(--bg-secondary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.theme-cream {
+  background-color: #fdfbf7 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Base Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Sections */
+.section {
+  padding: 6rem 0;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2), 0 2px 4px -1px rgba(79, 70, 229, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3), 0 4px 6px -2px rgba(79, 70, 229, 0.15);
+  color: white;
+}
+
+.btn-outline {
+  background-color: white;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-dark);
+  border-color: #d0d5dd;
+  transform: translateY(-2px);
+}
+
+/* Utilities */
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(79, 70, 229, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Grid & Layout Utilities */
+.grid {
+  display: grid;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+/* Hide scrollbar completely */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+}
+html, body {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
