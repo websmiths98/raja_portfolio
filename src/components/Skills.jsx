@@ -11,15 +11,25 @@ const skillsData = [
   },
   {
     category: "Databases",
-    items: ["PostgreSQL", "MySQL", "Raw SQL optimization"]
+    items: ["PostgreSQL", "MySQL", "Raw SQL Optimization"]
   },
   {
     category: "DevOps & Cloud",
-    items: ["Docker", "Kubernetes", "Linux", "Git/GitHub", "Jenkins", "AWS EC2", "OCI Compute", "Apache Web Server"]
+    items: ["Docker", "Kubernetes", "Linux", "Git/GitHub", "Gogs", "Jenkins", "AWS EC2", "OCI Compute", "Apache Web Server", "Agile Methodology"]
   },
   {
     category: "AI & Automation",
-    items: ["OpenAI API", "LLM", "Web Scraping (Selenium, BeautifulSoup)", "Cron Jobs", "RAG", "Claude AI"]
+    items: ["OpenAI API", "LLM", "Web Scraping (Selenium, BeautifulSoup, ETL)", "Cron Jobs", "RAG", "Claude AI"]
+  },
+  {
+    category: "Technical SEO",
+    items: [
+      "Google Search Console", "Keyword Research", "Screaming Frog", 
+      "Prompt Engineering", "AEO", "GEO", "On-Page SEO", "Off-Page SEO", 
+      "XML Sitemaps", "Robots.txt Files", "Site Speed and Core Web Vitals", 
+      "HTTPS Security", "Mobile Responsiveness", "Structured Data (Schema)", 
+      "Resolving JavaScript Rendering"
+    ]
   }
 ];
 
@@ -52,18 +62,18 @@ export default function Skills() {
                 boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
               }}
             >
-              <h3 style={{ fontSize: '1.125rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
+              <h3 style={{ fontSize: '1.125rem', color: '#22c55e', marginBottom: '1rem', fontWeight: '600' }}>
                 {skillGroup.category}
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {skillGroup.items.map((item, i) => (
                   <span key={i} style={{
                     fontSize: '0.875rem',
-                    padding: '0.35rem 0.75rem',
+                    padding: '0.4rem 0.85rem',
                     backgroundColor: 'var(--bg-secondary)',
                     color: 'var(--text-primary)',
-                    borderRadius: '0.375rem',
-                    border: '1px solid var(--border-color)'
+                    borderRadius: '9999px',
+                    boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
                   }}>
                     {item}
                   </span>

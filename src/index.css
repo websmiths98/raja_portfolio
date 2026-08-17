@@ -1,32 +1,31 @@
 :root {
-  --bg-color: #fdfbf7; /* Cream white */
-  --bg-secondary: #f4eee0; /* Slightly darker cream */
-  --bg-hero: #fdfbf7;
-  --text-primary: #2d3748;
-  --text-dark: #1a202c;
-  --text-secondary: #4a5568;
-  --accent-color: #8b5a2b; /* Coffee accent */
-  --accent-light: #f5e6d3;
-  --accent-hover: #6f431c;
-  --border-color: #e2e8f0;
+  --bg-color: #f8fafc; /* Slate 50 - clean white/blue tint */
+  --bg-secondary: #f1f5f9; /* Slate 100 */
+  --bg-hero: #f8fafc;
+  --text-primary: #334155; /* Slate 700 */
+  --text-dark: #0f172a; /* Slate 900 */
+  --text-secondary: #64748b; /* Slate 500 */
+  --accent-color: #2563eb; /* Trustable Blue 600 */
+  --accent-light: #dbeafe; /* Blue 100 */
+  --accent-hover: #1d4ed8; /* Blue 700 */
+  --border-color: #e2e8f0; /* Slate 200 */
 
   --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
 }
 
 /* Theme Classes */
 .theme-coffee {
-  background-color: #3b2f2f !important; /* Coffee brown */
-  color: #fdfbf7 !important;
-  --text-primary: #fdfbf7;
+  background-color: #0f172a !important; /* Deep Slate 900 */
+  color: #f8fafc !important;
+  --text-primary: #f8fafc;
   --text-dark: #ffffff;
-  --text-secondary: #d7ccc8;
-  --bg-secondary: rgba(253, 251, 247, 0.05);
-  --border-color: rgba(253, 251, 247, 0.1);
-  --accent-color: #e6b981; /* Lighter accent for dark theme */
+  --text-secondary: #94a3b8; /* Slate 400 */
+  --bg-secondary: rgba(248, 250, 252, 0.05);
+  --border-color: rgba(248, 250, 252, 0.1);
+  --accent-color: #10b981; /* Emerald Green 500 - contrast for dark theme */
 }
 .theme-coffee h1, 
 .theme-coffee h2, 
-.theme-coffee h3, 
 .theme-coffee .text-dark,
 .theme-coffee .section-title {
   color: var(--text-dark) !important;
@@ -42,7 +41,7 @@
 }
 
 .theme-cream {
-  background-color: #fdfbf7 !important;
+  background-color: #f8fafc !important;
 }
 
 * {
@@ -121,12 +120,12 @@ a {
 .btn-primary {
   background-color: var(--accent-color);
   color: white;
-  box-shadow: 0 4px 14px 0 rgba(139, 90, 43, 0.39);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
-  box-shadow: 0 6px 20px rgba(139, 90, 43, 0.23);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
 }
 
 .btn-outline {

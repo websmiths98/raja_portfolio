@@ -40,12 +40,12 @@ export default function Experience() {
           Professional Experience
         </motion.h2>
         
-        <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+        <div className="grid md:grid-cols-2 gap-6" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {experienceList.map((exp, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="card"
