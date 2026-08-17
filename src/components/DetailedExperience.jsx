@@ -66,11 +66,6 @@ export default function DetailedExperience() {
                     <h5 style={{ fontSize: '1rem', margin: 0, color: 'var(--text-primary)' }}>{step.title}</h5>
                     <p style={{ fontSize: '0.875rem', margin: 0, color: 'var(--text-secondary)' }}>{step.desc}</p>
                   </div>
-                  {index < workflowSteps.length - 1 && (
-                    <div style={{ color: 'var(--border-color)', display: 'flex', alignItems: 'center' }}>
-                      <ArrowRight size={20} />
-                    </div>
-                  )}
                 </div>
               ))}
             </div>

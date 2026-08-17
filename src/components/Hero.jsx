@@ -5,15 +5,7 @@ import { ArrowRight, Mail, Code2, Database, Cloud, Phone } from 'lucide-react';
 export default function Hero() {
   const [showPhone, setShowPhone] = useState(false);
   return (
-    <section id="hero" style={{
-      minHeight: 'calc(100vh - 70px)',
-      position: 'relative',
-      display: 'flex',
-      alignItems: 'center',
-      paddingTop: '2rem',
-      paddingBottom: '4rem',
-      overflow: 'hidden'
-    }}>
+    <section id="hero" className="hero-section">
       <div className="container w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
@@ -22,46 +14,28 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            style={{ paddingRight: '2rem' }}
+            className="hero-content"
           >
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              backgroundColor: 'var(--accent-light)',
-              color: 'var(--accent-color)',
-              padding: '0.5rem 1rem',
-              borderRadius: '9999px',
-              fontSize: '0.75rem',
-              fontWeight: 700,
-              letterSpacing: '1px',
-              marginBottom: '2rem'
-            }}>
-              <Code2 size={14} />
-              DEVOPS & BACKEND DEVELOPER
+            <div className="hero-badges-container" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem', width: '100%' }}>
+              <div className="hero-badge" style={{ marginBottom: 0 }}>
+                <Code2 size={14} />
+                DEVOPS & BACKEND DEVELOPER
+              </div>
+              <div className="hero-badge" style={{ marginBottom: 0, backgroundColor: 'rgba(16, 185, 129, 0.1)', color: '#047857', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+                <span className="blink-dot" style={{ width: '8px', height: '8px', backgroundColor: '#10b981', borderRadius: '50%', display: 'inline-block' }}></span>
+                Based in Chennai
+              </div>
             </div>
 
-            <h1 style={{
-              fontSize: '4.5rem',
-              marginBottom: '1.5rem',
-              lineHeight: 1.1,
-              letterSpacing: '-2px',
-              color: 'var(--text-dark)'
-            }}>
-              Building Scalable Solutions. Automating the <span className="text-accent">Future</span>
+            <h1 className="hero-title">
+              Building Scalable Solutions. Automating the <span className="text-accent">Future!</span>
             </h1>
 
-            <p style={{
-              fontSize: '1.25rem',
-              color: 'var(--text-secondary)',
-              marginBottom: '2.5rem',
-              lineHeight: 1.6,
-              maxWidth: '90%'
-            }}>
+            <p className="hero-subtitle">
               Backend Developer with 1+ years of experience building secure, scalable, and efficient web applications and DevOps automation
             </p>
 
-            <div className="flex gap-4 mb-8">
+            <div className="hero-buttons">
               <button className="btn btn-primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
                 View My Work <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
               </button>
@@ -127,7 +101,7 @@ export default function Hero() {
               borderRadius: '50%'
             }}></div>
 
-            <div style={{ width: '100%', maxWidth: '600px', position: 'relative' }}>
+            <div className="hero-image-wrapper" style={{ width: '100%', maxWidth: '600px', position: 'relative' }}>
               <img
                 src="/me_photo-removebg-preview.png"
                 alt="Raja V"
@@ -140,19 +114,22 @@ export default function Hero() {
                 icon={Code2}
                 title="Backend"
                 desc="Python, Django, REST APIs"
-                style={{ top: '30%', left: '-15%', animationDelay: '0s' }}
+                className="hero-floating-card card-1"
+                style={{ animationDelay: '0s' }}
               />
               <FloatingCard
                 icon={Cloud}
                 title="DevOps"
                 desc="Automation & CI/CD"
-                style={{ top: '15%', right: '-20%', animationDelay: '2s' }}
+                className="hero-floating-card card-2"
+                style={{ animationDelay: '2s' }}
               />
               <FloatingCard
                 icon={Database}
                 title="Database"
                 desc="PostgreSQL, Optimized Queries"
-                style={{ bottom: '25%', right: '-15%', animationDelay: '1s' }}
+                className="hero-floating-card card-3"
+                style={{ animationDelay: '1s' }}
               />
             </div>
           </motion.div>
@@ -202,16 +179,13 @@ function SocialIcon({ Icon, href }) {
   );
 }
 
-function FloatingCard({ icon: Icon, title, desc, style }) {
+function FloatingCard({ icon: Icon, title, desc, style, className = '' }) {
   return (
-    <div className="glass-card" style={{
-      position: 'absolute',
+    <div className={`glass-card ${className}`} style={{
       padding: '1rem',
       borderRadius: '0.75rem',
-      display: 'flex',
       alignItems: 'center',
       gap: '1rem',
-      minWidth: '220px',
       animation: 'float 6s ease-in-out infinite',
       ...style
     }}>
