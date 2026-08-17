@@ -36,7 +36,7 @@ export default function Hero() {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn btn-primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
+              <button className="btn btn-primary" onClick={() => document.getElementById('experience-details').scrollIntoView({ behavior: 'smooth' })}>
                 View My Work <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
               </button>
               <button 

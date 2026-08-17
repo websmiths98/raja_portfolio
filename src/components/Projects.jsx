@@ -12,7 +12,7 @@ const projectsList = [
     title: "AI-Powered Weather Chatbot",
     date: "Personal Project",
     description: "Deployed region-specific weather assistant providing real-time forecasts for Tamil Nadu cities with 95%+ accuracy and <2 second response times.",
-    tags: ["Django REST Framework", "OpenRouter GPT-4o", "OpenWeatherMap API", "JWT Authentication", "Docker"]
+    tags: ["Django REST Framework", "OpenRouter GPT-4o", "OpenWeatherMap API", "Python", "JWT Authentication", "Docker", "Postman", "Linux"]
   }
 ];
 

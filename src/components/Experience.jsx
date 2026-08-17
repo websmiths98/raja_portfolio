@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 
 const experienceList = [
   {
-    role: "Backend & DevOps Engineer",
-    company: "MarketForesee",
+    role: "Backend & DevOps",
+    company: "Prince Capital Private Limited",
+    project: "MarketForesee",
     duration: "Jun 2025 - Present",
     location: "Chennai, India",
     points: [
@@ -15,7 +16,8 @@ const experienceList = [
   },
   {
     role: "Backend Developer",
-    company: "Apex Esther Robotech",
+    company: "Prince Capital Private Limited",
+    project: "Apex Esther Robotech",
     duration: "July 2024 - Jun 2025",
     location: "Chennai, India",
     points: [
@@ -30,7 +32,7 @@ export default function Experience() {
   return (
     <section className="section theme-coffee" id="experience">
       <div className="container">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,10 +41,10 @@ export default function Experience() {
         >
           Professional Experience
         </motion.h2>
-        
+
         <div className="grid md:grid-cols-2 gap-6" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {experienceList.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -55,13 +57,18 @@ export default function Experience() {
                 <div>
                   <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)', marginBottom: '0.25rem' }}>{exp.role}</h3>
                   <div style={{ fontSize: '1.125rem', color: 'var(--accent-color)', fontWeight: 500 }}>{exp.company}</div>
+                  {exp.project && (
+                    <div style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginTop: '0.25rem', fontWeight: 500 }}>
+                      Project: <span style={{ color: 'var(--text-primary)' }}>{exp.project}</span>
+                    </div>
+                  )}
                 </div>
                 <div style={{ textAlign: 'right', color: 'var(--text-secondary)' }}>
                   <div style={{ fontWeight: 500 }}>{exp.duration}</div>
                   <div style={{ fontSize: '0.875rem' }}>{exp.location}</div>
                 </div>
               </div>
-              
+
               <ul style={{ listStyleType: 'none', paddingLeft: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', color: 'var(--text-secondary)' }}>
                 {exp.points.map((point, i) => (
                   <li key={i}>{point}</li>

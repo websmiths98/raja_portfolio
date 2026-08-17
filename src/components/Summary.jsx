@@ -50,7 +50,7 @@ export default function Summary() {
             <div style={{ marginTop: '2rem', padding: '1rem 1.25rem', backgroundColor: 'rgba(16, 185, 129, 0.08)', borderRadius: '0.75rem', borderLeft: '4px solid #10b981' }}>
               <h3 style={{ fontSize: '1.05rem', color: '#10b981', marginBottom: '0.5rem', fontWeight: 600 }}>Interested Roles</h3>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.6, fontWeight: 500 }}>
-                Python Backend Developer • DevOps • AI Backend Developer • Web Scraping / Automation Developer • Data/Financial Technology Backend Developer • Technical SEO Specialist
+                Python Backend Developer • DevOps • Django Developer • AI Backend Developer • Web Scraping / Automation Developer • Data/Financial Technology Backend Developer • Technical SEO Specialist
               </p>
             </div>
           </motion.div>
